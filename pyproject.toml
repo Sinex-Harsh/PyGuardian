@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyguardian"
+version = "0.3.0"
+description = "Python Dependency Intelligence & Auto-Migration Assistant"
+requires-python = ">=3.10"
+readme = "README.md"
+
+dependencies = [
+    "requests>=2.31.0",
+    "packaging>=24.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+pyguardian = "pyguardian.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyguardian*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

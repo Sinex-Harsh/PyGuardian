@@ -1,0 +1,19 @@
+# Example project requirements
+# This file simulates a real Python project's dependencies.
+
+numpy==1.26.4
+pandas==2.2.0
+requests==2.31.0
+rich==13.7.0
+Flask==3.0.0
+sqlalchemy==2.0.25
+pytest==8.0.0
+
+# A version with extras
+celery[redis]==5.3.4
+
+# A range specifier (common in real projects)
+httpx>=0.24.0,<1.0
+
+# This line is intentionally malformed to test error handling
+!!!invalid_package_name
